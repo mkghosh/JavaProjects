@@ -10,7 +10,7 @@ public class Fibonacci {
      * <p>This is a poor implementation of fibonacci number generation.</p>
      * <p>This method can successfully compute upto 50th fibonacci number with more time but will take much more time to determine after that.</p>
      * @param number {@link Integer} the nth number.
-     * @return {@link Integer} fibonacci number.
+     * @return {@link Long} fibonacci number.
      */
     public long fibonacciNumberRecur(int number) {
         if(number < 0)
@@ -20,7 +20,7 @@ public class Fibonacci {
         else if(number == 1 || number == 2)
             return 1L;
         else
-            return fibonacciNumberRecur(number-1) + fibonacciNumberRecur(number -2);
+            return fibonacciNumberRecur(number - 1) + fibonacciNumberRecur(number - 2);
         return 0;
     }
 
