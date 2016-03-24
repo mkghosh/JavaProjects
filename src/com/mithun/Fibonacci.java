@@ -1,4 +1,4 @@
-package com.company;
+package com.mithun;
 
 /**
  * Created by Mithun Kumer Ghose on 2/29/2016.
