@@ -1,6 +1,8 @@
 package com.mithun;
 
 
+import com.mithun.fibonacci.Fibonacci;
+
 public class Test {
 
     public static void main(String[] args) {

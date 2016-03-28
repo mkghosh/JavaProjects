@@ -1,6 +1,9 @@
-package com.mithun;
+package com.mithun.fibonacci;
 
 /**
+ * <h1>Class for determining fibonacci number.</h1>
+ * <p>This class have implementaions of fibonacci number not only for a single number but also it has the </p>
+ * <p>implementation for the series of fibonacci numbers.</p>
  * Created by Mithun Kumer Ghose on 2/29/2016.
  */
 public class Fibonacci {
