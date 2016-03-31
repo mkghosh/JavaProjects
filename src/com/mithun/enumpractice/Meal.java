@@ -10,6 +10,7 @@ public enum Meal {
         @Override
         double mealPrices(Day day) {
             double breakfastPrice = 10.50;
+            //Both .equals and == operator works on enum types
             if (day.equals(Day.SATURDAY) || day == Day.SUNDAY)
                 breakfastPrice *= 1.5;
             return breakfastPrice;
@@ -21,10 +22,28 @@ public enum Meal {
         }
     },
 
+    PRELAUNCH(11,30) {
+        @Override
+        double mealPrices(Day day) {
+            double preLaunchPrice = 3;
+            //compare to can also be used for the checking of the enum type along with == operator and .equals operator
+            if((day == Day.FRIDAY) || (day.compareTo(Day.THURSDAY) > 0)){
+                preLaunchPrice *= 1.2;
+            }
+            return preLaunchPrice;
+        }
+
+        @Override
+        public String toString() {
+            return "Pre-Launch";
+        }
+    },
+
     LAUNCH(2,45) {
         @Override
         double mealPrices(Day day) {
             double lunchPrice = 20.50;
+            //switch can also be used on enum type.
             switch (day) {
                 case SATURDAY: case SUNDAY:
                     lunchPrice *= 2.0;
@@ -35,6 +54,22 @@ public enum Meal {
         @Override
         public String toString() {
             return "Lunch";
+        }
+    },
+
+    EVENINGBREAK (5,00) {
+        @Override
+        double mealPrices(Day day) {
+            double evningMealPrice = 4;
+            if((day.compareTo(Day.THURSDAY) > 0) || day.compareTo(Day.MONDAY) > 0) {
+                evningMealPrice += 2;
+            }
+            return evningMealPrice;
+        }
+
+        @Override
+        public String toString() {
+            return "Evening-Meal";
         }
     },
 
@@ -83,5 +118,11 @@ public enum Meal {
      */
     public int getMinute() {
         return minute;
+    }
+
+    @Override
+    public String toString() {
+        return "The complete meal of a day is : " + Meal.BREAKFAST + " at" + Meal.BREAKFAST.getHour() + ":" + Meal.BREAKFAST.getMinute() +
+                "\n" + Meal.PRELAUNCH + " in " + Meal.PRELAUNCH.getHour() + ":" + Meal.PRELAUNCH.getMinute() + "\n";
     }
 }
