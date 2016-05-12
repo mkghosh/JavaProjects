@@ -34,10 +34,7 @@ public class JavaFXLearn extends Application implements EventHandler<ActionEvent
             }
         }*//* this);*/
 
-        btn1.setOnAction(event -> {
-            System.out.println("This is the first lambda expression using java8");
-            System.out.println("This is the second lambda expression using java8");
-        });
+        btn1.setOnAction(event -> AlertJavaFX.displayAlert("Alert Box to open", "Some dummy text"));
 
         StackPane layout = new StackPane();
         layout.getChildren().add(0, btn1);
