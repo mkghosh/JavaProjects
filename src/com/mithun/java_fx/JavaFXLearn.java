@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -36,9 +37,10 @@ public class JavaFXLearn extends Application implements EventHandler<ActionEvent
 
         btn1.setOnAction(event -> AlertJavaFX.displayAlert("Alert Box to open", "Some dummy text"));
 
-        StackPane layout = new StackPane();
+        HBox layout = new HBox();
+        layout.setSpacing(30);
         layout.getChildren().add(0, btn1);
-//        layout.getChildren().add(1, btn2);
+        layout.getChildren().add(1, btn2);
 
         Scene scene = new Scene(layout, 300, 300);
 
