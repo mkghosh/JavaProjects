@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mithun.java_fx.view.controller.PersonEditDialogController">
+<AnchorPane styleClass="background" stylesheets="@../styling/DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mithun.java_fx.view.controller.PersonEditDialogController">
    <children>
       <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="600.0">
         <columnConstraints>
@@ -39,7 +39,7 @@
             <TextField fx:id="birthdayField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <ButtonBar layoutX="414.0" layoutY="276.0" prefHeight="40.0" prefWidth="174.0">
+      <ButtonBar layoutX="384.0" layoutY="276.0" prefHeight="40.0" prefWidth="210.0">
          <buttons>
             <Button mnemonicParsing="false" onAction="#handleOk" text="Done" />
           <Button mnemonicParsing="false" onAction="#handleCancel" text="Calcel" />
